@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: live probe of https://stance.com/.well-known/*
+host: https://stance.com
+note: >-
+  stance.com runs on Shopify. The /.well-known/ OAuth+OIDC discovery documents
+  describe the Shopify Customer Account API deployment scoped to Stance's
+  storefront (issuer shopify.com/authentication/102408782162, endpoints hosted
+  at account.stance.com). Values captured verbatim from the live documents.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: application/json
+  file: stance-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: application/json
+  file: stance-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

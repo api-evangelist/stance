@@ -1,8 +1,29 @@
 aid: stance
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stance.png
 name: Stance
-description: Stance is a company surfaced as a portfolio company of bond-capital, shasta-ventures and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Stance is a direct-to-consumer apparel brand best known for expressive,
+  performance-oriented socks, plus underwear and related apparel sold under the
+  "Feel good, do good" tagline. The company operates a Shopify-hosted online
+  storefront at stance.com with licensed collaborations (MLB, NBA, Disney, and
+  others). Stance publishes no developer product API; its only public
+  machine-facing surface is the Shopify Customer Account API (OpenID
+  Connect / OAuth 2.0) exposed for customer sign-in at account.stance.com. It
+  was surfaced in the API Evangelist network as a portfolio company of Bond
+  Capital and Shasta Ventures and enriched from live probes of its public
+  well-known discovery documents and storefront pages.
 url: https://raw.githubusercontent.com/api-evangelist/stance/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,9 +34,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Apparel
+- Retail
+- E-commerce
+- Socks
+- Direct-to-Consumer
+- Shopify
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +52,26 @@ maintainers:
 common:
 - type: Website
   url: https://stance.com
+- type: PrivacyPolicy
+  url: https://stance.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://stance.com/policies/terms-of-service
+- type: Support
+  url: https://stance.com/pages/contact-us
+- type: Blog
+  url: https://stance.com/blogs/news
+- type: Login
+  url: https://stance.com/account/login
+- type: WellKnown
+  url: well-known/stance-well-known.yml
+- type: Authentication
+  url: authentication/stance-authentication.yml
+- type: OAuthScopes
+  url: scopes/stance-scopes.yml
+- type: DomainSecurity
+  url: security/stance-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1

@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://stance.com/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+note: >-
+  Derived from the live OpenID Connect / OAuth 2.0 discovery document served at
+  stance.com. Stance's storefront runs on Shopify; customer authentication is
+  the Shopify Customer Account API (OIDC), with authorization and token
+  endpoints hosted under account.stance.com. This is the only public auth
+  surface for stance.com — the retail storefront itself exposes no product API.
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - authorizationCode
+  pkce: S256
+  token_endpoint_auth: client_secret_basic
+schemes:
+- name: ShopifyCustomerAccountOIDC
+  type: openIdConnect
+  issuer: https://shopify.com/authentication/102408782162
+  authorization_endpoint: https://account.stance.com/authentication/oauth/authorize
+  token_endpoint: https://account.stance.com/authentication/oauth/token
+  end_session_endpoint: https://account.stance.com/authentication/logout
+  jwks_uri: https://account.stance.com/authentication/.well-known/jwks.json
+  response_types_supported:
+  - code
+  grant_types_supported:
+  - authorization_code
+  - refresh_token
+  - urn:ietf:params:oauth:grant-type:jwt-bearer
+  code_challenge_methods_supported:
+  - S256
+  id_token_signing_alg_values_supported:
+  - RS256
+  subject_types_supported:
+  - public
+  token_endpoint_auth_methods_supported:
+  - client_secret_basic
+  claims_supported:
+  - iss
+  - sub
+  - aud
+  - exp
+  - iat
+  - nonce
+  - sid
+  - email
+  - email_verified
+  sources:
+  - well-known/stance-openid-configuration.json
